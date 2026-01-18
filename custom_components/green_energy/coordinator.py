@@ -23,6 +23,7 @@ from .const import (
     DOMAIN,
     CONF_TOKEN,
     CONF_INSTANCE_ID,
+    CONF_API_URL,
     CONF_SOLAR_ENTITY,
     CONF_BATTERY_ENTITY,
     CONF_GRID_ENTITY,
@@ -43,9 +44,10 @@ class GreenEnergyCoordinator(DataUpdateCoordinator[dict[str, Any]]):
 
     def __init__(self, hass: HomeAssistant, config_entry: ConfigEntry) -> None:
         """Initialize the coordinator."""
+        api_url = config_entry.data.get(CONF_API_URL, DEFAULT_API_URL)
         self._api_client = GreenEnergyApiClient(
             session=async_get_clientsession(hass),
-            api_url=DEFAULT_API_URL,
+            api_url=api_url,
             token=config_entry.data[CONF_TOKEN],
             instance_id=config_entry.data[CONF_INSTANCE_ID],
         )

@@ -9,6 +9,7 @@ CONF_PAIRING_CODE: Final = "pairing_code"
 CONF_TOKEN: Final = "api_token"
 CONF_INSTANCE_ID: Final = "instance_id"
 CONF_USER_EMAIL: Final = "user_email"
+CONF_API_URL: Final = "api_url"
 
 # Options keys
 CONF_SOLAR_ENTITY: Final = "solar_entity"

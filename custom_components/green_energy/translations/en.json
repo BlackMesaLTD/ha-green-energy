@@ -5,7 +5,8 @@
         "title": "Connect to Green Energy",
         "description": "Enter the pairing code from your [Green Energy dashboard]({pairing_url})",
         "data": {
-          "pairing_code": "Pairing Code"
+          "pairing_code": "Pairing Code",
+          "api_url": "API URL (advanced)"
         }
       },
       "entities": {

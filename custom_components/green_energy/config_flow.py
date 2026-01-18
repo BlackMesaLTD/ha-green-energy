@@ -23,6 +23,7 @@ from .const import (
     CONF_TOKEN,
     CONF_INSTANCE_ID,
     CONF_USER_EMAIL,
+    CONF_API_URL,
     CONF_SOLAR_ENTITY,
     CONF_BATTERY_ENTITY,
     CONF_GRID_ENTITY,
@@ -46,6 +47,7 @@ class GreenEnergyConfigFlow(ConfigFlow, domain=DOMAIN):
         self._token: str | None = None
         self._instance_id: str | None = None
         self._user_email: str | None = None
+        self._api_url: str = DEFAULT_API_URL
 
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
@@ -55,10 +57,11 @@ class GreenEnergyConfigFlow(ConfigFlow, domain=DOMAIN):
 
         if user_input is not None:
             pairing_code = user_input[CONF_PAIRING_CODE].strip()
+            self._api_url = user_input.get(CONF_API_URL, DEFAULT_API_URL).rstrip("/")
 
             api = GreenEnergyApiClient(
                 session=async_get_clientsession(self.hass),
-                api_url=DEFAULT_API_URL,
+                api_url=self._api_url,
             )
 
             try:
@@ -87,11 +90,12 @@ class GreenEnergyConfigFlow(ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(
                 {
                     vol.Required(CONF_PAIRING_CODE): str,
+                    vol.Optional(CONF_API_URL, default=DEFAULT_API_URL): str,
                 }
             ),
             errors=errors,
             description_placeholders={
-                "pairing_url": f"{DEFAULT_API_URL}/settings/integrations"
+                "pairing_url": f"{DEFAULT_API_URL}/dashboard/settings?tab=connections&conn=home-assistant"
             },
         )
 
@@ -106,6 +110,7 @@ class GreenEnergyConfigFlow(ConfigFlow, domain=DOMAIN):
                     CONF_TOKEN: self._token,
                     CONF_INSTANCE_ID: self._instance_id,
                     CONF_USER_EMAIL: self._user_email,
+                    CONF_API_URL: self._api_url,
                 },
                 options={
                     CONF_SOLAR_ENTITY: user_input.get(CONF_SOLAR_ENTITY),
