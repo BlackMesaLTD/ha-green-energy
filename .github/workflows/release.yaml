@@ -1,0 +1,24 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create release zip
+        run: |
+          cd custom_components
+          zip -r ../green_energy.zip green_energy
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: green_energy.zip
+          generate_release_notes: true

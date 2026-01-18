@@ -1,0 +1,12 @@
+{
+  "domain": "green_energy",
+  "name": "Green Energy",
+  "codeowners": ["@your-github"],
+  "config_flow": true,
+  "documentation": "https://github.com/your-org/ha-green-energy",
+  "issue_tracker": "https://github.com/your-org/ha-green-energy/issues",
+  "iot_class": "cloud_polling",
+  "version": "1.0.0",
+  "requirements": ["aiohttp>=3.8.0"],
+  "dependencies": []
+}

@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Green Energy",
+        "description": "Enter the pairing code from your [Green Energy dashboard]({pairing_url})",
+        "data": {
+          "pairing_code": "Pairing Code"
+        }
+      },
+      "entities": {
+        "title": "Select Energy Sensors",
+        "description": "Choose which sensors to sync with Green Energy",
+        "data": {
+          "solar_entity": "Solar Power Sensor",
+          "battery_entity": "Battery State Sensor",
+          "grid_entity": "Grid Power Sensor",
+          "scan_interval": "Sync Interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "invalid_code": "Invalid or expired pairing code",
+      "cannot_connect": "Cannot connect to Green Energy service",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "This account is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Green Energy Options",
+        "data": {
+          "solar_entity": "Solar Power Sensor",
+          "battery_entity": "Battery State Sensor",
+          "grid_entity": "Grid Power Sensor",
+          "scan_interval": "Sync Interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "sync_status": {
+        "name": "Sync Status"
+      },
+      "last_sync": {
+        "name": "Last Sync"
+      },
+      "readings_today": {
+        "name": "Readings Today"
+      },
+      "recommendation": {
+        "name": "Recommendation"
+      },
+      "savings_today": {
+        "name": "Savings Today"
+      },
+      "tariff_rate": {
+        "name": "Current Tariff Rate"
+      }
+    },
+    "binary_sensor": {
+      "connected": {
+        "name": "Connected"
+      }
+    }
+  }
+}
