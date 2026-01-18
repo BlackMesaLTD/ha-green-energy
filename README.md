@@ -1,7 +1,7 @@
 # Green Energy Home Assistant Integration
 
 [![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-[![GitHub Release](https://img.shields.io/github/release/your-org/ha-green-energy.svg)](https://github.com/your-org/ha-green-energy/releases)
+[![GitHub Release](https://img.shields.io/github/release/BlackMesaLTD/ha-green-energy.svg)](https://github.com/BlackMesaLTD/ha-green-energy/releases)
 
 A Home Assistant integration that syncs your energy data with the Green Energy cloud service for optimization recommendations and savings tracking.
 
@@ -19,13 +19,13 @@ A Home Assistant integration that syncs your energy data with the Green Energy c
 1. Open HACS in your Home Assistant instance
 2. Click "Integrations"
 3. Click the menu (three dots) and select "Custom repositories"
-4. Add `https://github.com/your-org/ha-green-energy` as an Integration
+4. Add `https://github.com/BlackMesaLTD/ha-green-energy` as an Integration
 5. Click "Install"
 6. Restart Home Assistant
 
 ### Manual Installation
 
-1. Download the latest release from the [releases page](https://github.com/your-org/ha-green-energy/releases)
+1. Download the latest release from the [releases page](https://github.com/BlackMesaLTD/ha-green-energy/releases)
 2. Extract the `green_energy` folder to your `custom_components` directory
 3. Restart Home Assistant
 
@@ -33,14 +33,14 @@ A Home Assistant integration that syncs your energy data with the Green Energy c
 
 ### Prerequisites
 
-1. Create an account at [Green Energy](https://your-app.com)
+1. Create an account at [Green Energy](https://green-energy-topaz.vercel.app)
 2. Configure your Octopus Energy account (optional but recommended for tariff data)
 
 ### Setup
 
 1. Go to Settings → Devices & Services → Add Integration
 2. Search for "Green Energy"
-3. Generate a pairing code from your [Green Energy dashboard](https://your-app.com/settings/integrations)
+3. Generate a pairing code from your [Green Energy dashboard](https://green-energy-topaz.vercel.app/settings/integrations)
 4. Enter the pairing code
 5. Select which energy sensors to monitor:
    - **Solar Power Sensor**: Your solar panel power output sensor
@@ -102,8 +102,8 @@ automation:
 
 ## Support
 
-- [Report an Issue](https://github.com/your-org/ha-green-energy/issues)
-- [Documentation](https://your-app.com/docs/home-assistant)
+- [Report an Issue](https://github.com/BlackMesaLTD/ha-green-energy/issues)
+- [Documentation](https://green-energy-topaz.vercel.app/docs/home-assistant)
 
 ## License
 

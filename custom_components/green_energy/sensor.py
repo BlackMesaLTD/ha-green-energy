@@ -65,7 +65,7 @@ class GreenEnergyBaseSensor(CoordinatorEntity[GreenEnergyCoordinator], SensorEnt
             name="Green Energy",
             manufacturer="Green Energy Ltd",
             model="Cloud Integration",
-            configuration_url="https://your-app.com/dashboard",
+            configuration_url="https://green-energy-topaz.vercel.app/dashboard",
             sw_version=VERSION,
         )
 

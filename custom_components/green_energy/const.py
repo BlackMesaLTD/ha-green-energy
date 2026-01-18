@@ -17,7 +17,7 @@ CONF_GRID_ENTITY: Final = "grid_entity"
 CONF_SCAN_INTERVAL: Final = "scan_interval"
 
 # API
-DEFAULT_API_URL: Final = "https://your-app.com"  # TODO: Replace with actual URL
+DEFAULT_API_URL: Final = "https://green-energy-topaz.vercel.app"
 API_TIMEOUT: Final = 30
 
 # Defaults

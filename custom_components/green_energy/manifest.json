@@ -1,12 +1,12 @@
 {
   "domain": "green_energy",
   "name": "Green Energy",
-  "codeowners": ["@your-github"],
+  "codeowners": ["@BlackMesaLTD"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/your-org/ha-green-energy",
+  "documentation": "https://github.com/BlackMesaLTD/ha-green-energy",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/your-org/ha-green-energy/issues",
+  "issue_tracker": "https://github.com/BlackMesaLTD/ha-green-energy/issues",
   "requirements": ["aiohttp>=3.8.0"],
   "version": "1.0.0"
 }
